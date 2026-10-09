@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#14100D">
+  <meta name="description" content="SOLVÈNE — a private fitting appointment. See every piece of the collection on you.">
+  <title>SOLVÈNE — Private Salon</title>
+  <link rel="icon" href="/assets/monogram.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/maison.css">
+</head>
+<body class="is-dark" data-scene="prelude">
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__ring"></span><span class="cursor__dot"></span></div>
+
+  <!-- ─────────────── Masthead ─────────────── -->
+  <header class="masthead">
+    <span class="wordmark" aria-label="Solvène">SOLV<span class="wordmark__accent">È</span>NE</span>
+    <div class="masthead__chapter" aria-live="polite">
+      <span class="masthead__numeral" data-chapter-numeral></span>
+      <span class="masthead__title" data-chapter-title></span>
+    </div>
+    <button class="masthead__selection" type="button" data-open-selection hidden>
+      <span>Selection</span><span class="masthead__count" data-selection-count>0</span>
+    </button>
+  </header>
+
+  <main class="stage" id="stage">
+
+    <!-- ═══════════ Prelude ═══════════ -->
+    <section class="scene scene--prelude" data-scene="prelude" data-tone="dark" aria-labelledby="prelude-title">
+      <div class="prelude__light" aria-hidden="true"></div>
+      <div class="prelude__inner">
+        <p class="eyebrow" data-reveal>By private appointment</p>
+        <h1 class="prelude__mark" aria-label="Solvène" data-mark>SOLVÈNE</h1>
+        <p class="prelude__welcome" id="prelude-title" data-reveal data-welcome>&nbsp;</p>
+        <p class="prelude__lede" data-reveal>A fitting room with no mirror but the truth. Every piece of the collection, seen on you — before anyone else.</p>
+        <button class="btn btn--light" type="button" data-begin data-reveal>
+          <span>Begin the appointment</span>
+        </button>
+      </div>
+      <p class="prelude__foot" data-reveal>Your portrait remains private to you and the house.</p>
+    </section>
+
+    <!-- ═══════════ I · Portrait ═══════════ -->
+    <section class="scene scene--portrait" data-scene="portrait" data-chapter="I" data-chapter-title="The Portrait">
+      <div class="split">
+        <div class="split__text">
+          <p class="eyebrow" data-reveal>Chapter I</p>
+          <h2 class="display" data-reveal>Your portrait,<br><em>head to toe.</em></h2>
+          <p class="lede" data-reveal>Stand tall in soft, even light, arms gently at your sides. This is the canvas the atelier will dress.</p>
+
+          <div class="choices" data-portrait-choices>
+            <label class="choice" data-reveal>
+              <input class="sr-only" type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/heif" data-file-input>
+              <span class="choice__n">01</span>
+              <span class="choice__body"><span class="choice__title">Share a photograph</span><span class="choice__hint">From your gallery or files</span></span>
+              <span class="choice__arrow" aria-hidden="true"></span>
+            </label>
+            <button class="choice" type="button" data-open-camera data-reveal>
+              <span class="choice__n">02</span>
+              <span class="choice__body"><span class="choice__title">Take it now</span><span class="choice__hint">With your camera, guided</span></span>
+              <span class="choice__arrow" aria-hidden="true"></span>
+            </button>
+            <button class="choice" type="button" data-open-whatsapp data-reveal>
+              <span class="choice__n">03</span>
+              <span class="choice__body"><span class="choice__title">Send by WhatsApp</span><span class="choice__hint">We will message you to request it</span></span>
+              <span class="choice__arrow" aria-hidden="true"></span>
+            </button>
+          </div>
+
+          <form class="whatsapp" data-whatsapp-form hidden novalidate>
+            <p class="whatsapp__intro">Your mobile number on WhatsApp. We will send a single message inviting you to reply with your photograph.</p>
+            <div class="phone">
+              <label class="field field--dial">
+                <input class="field__input" placeholder=" " name="dialCode" inputmode="tel" autocomplete="tel-country-code" maxlength="5" data-dial>
+                <span class="field__label">Code</span>
+              </label>
+              <label class="field field--grow">
+                <input class="field__input" placeholder=" " name="number" inputmode="tel" autocomplete="tel-national" maxlength="16" required>
+                <span class="field__label">Mobile number</span>
+              </label>
+            </div>
+            <p class="field__error" data-error></p>
+            <div class="row">
+              <button class="btn btn--solid" type="submit"><span>Send me the request</span></button>
+              <button class="link" type="button" data-cancel-whatsapp>Choose another way</button>
+            </div>
+          </form>
+
+          <div class="awaiting" data-whatsapp-awaiting hidden>
+            <div class="awaiting__pulse" aria-hidden="true"><span></span><span></span><span></span></div>
+            <p class="awaiting__title">A message is on its way to <span data-awaiting-number></span>.</p>
+            <p class="awaiting__hint">Reply with your full-length photograph — it will appear here the moment it arrives.</p>
+            <button class="link" type="button" data-cancel-whatsapp>Share it here instead</button>
+          </div>
+        </div>
+
+        <div class="split__visual">
+          <figure class="arch arch--portrait" data-portrait-frame data-reveal>
+            <div class="arch__empty" data-portrait-empty>
+              <svg class="silhouette" viewBox="0 0 120 300" aria-hidden="true"><path d="M60 18a16 16 0 1 1 0 32a16 16 0 1 1 0-32Zm-22 44c6-5 14-7 22-7s16 2 22 7c7 6 10 16 11 26l4 54c0 4-3 7-7 7s-6-3-7-7l-4-42-2 72 6 92c0 5-4 9-9 9s-8-4-9-9l-9-82-9 82c-1 5-4 9-9 9s-9-4-9-9l6-92-2-72-4 42c-1 4-3 7-7 7s-7-3-7-7l4-54c1-10 4-20 11-26Z"/></svg>
+              <figcaption>Your silhouette<br><em>awaits</em></figcaption>
+            </div>
+            <img class="arch__img" alt="Your portrait" data-portrait-img hidden>
+            <div class="arch__veil" data-portrait-veil hidden><span>Receiving</span></div>
+          </figure>
+          <div class="portrait-actions" data-portrait-actions hidden>
+            <button class="btn btn--solid" type="button" data-portrait-confirm><span>This is me</span></button>
+            <button class="link" type="button" data-portrait-retake>Choose another</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ II · Measure ═══════════ -->
+    <section class="scene scene--size" data-scene="size" data-chapter="II" data-chapter-title="Your Measure">
+      <div class="column">
+        <p class="eyebrow" data-reveal>Chapter II</p>
+        <h2 class="display" data-reveal>Your <em>measure.</em></h2>
+        <p class="lede" data-reveal>Choose the size you most often wear. The atelier will refine the rest.</p>
+        <div class="sizes" role="radiogroup" aria-label="Size" data-sizes></div>
+        <p class="sizes__unit" data-reveal>Approximate body measurements, in centimetres.</p>
+        <div class="row row--end" data-reveal>
+          <button class="btn btn--solid" type="button" data-size-continue disabled><span>Continue</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ III · Particulars ═══════════ -->
+    <section class="scene scene--particulars" data-scene="particulars" data-chapter="III" data-chapter-title="Introductions">
+      <div class="column column--narrow">
+        <p class="eyebrow" data-reveal>Chapter III</p>
+        <h2 class="display" data-reveal>How shall we<br><em>address you?</em></h2>
+        <form class="form" data-particulars-form novalidate autocomplete="on">
+          <label class="field" data-reveal>
+            <input class="field__input" placeholder=" " name="name" autocomplete="name" maxlength="60" required>
+            <span class="field__label">Your name</span>
+            <span class="field__error" data-error-for="name"></span>
+          </label>
+          <div class="phone" data-reveal>
+            <label class="field field--dial">
+              <input class="field__input" placeholder=" " name="dialCode" inputmode="tel" autocomplete="tel-country-code" maxlength="5" data-dial>
+              <span class="field__label">Code</span>
+            </label>
+            <label class="field field--grow">
+              <input class="field__input" placeholder=" " name="number" inputmode="tel" autocomplete="tel-national" maxlength="16" required>
+              <span class="field__label">Mobile number</span>
+              <span class="field__error" data-error-for="number"></span>
+            </label>
+          </div>
+          <label class="field field--email" data-reveal>
+            <input class="field__input" placeholder=" " name="email" type="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" maxlength="254" required
+              role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="email-suggest" data-email>
+            <span class="field__label">Email address</span>
+            <ul class="suggest" id="email-suggest" role="listbox" hidden data-email-suggest></ul>
+            <span class="field__error" data-error-for="email"></span>
+          </label>
+          <p class="form__privacy" data-reveal>Held in confidence. Used only to send you your looks.</p>
+          <div class="row row--end" data-reveal>
+            <button class="btn btn--solid" type="submit"><span>Continue</span></button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ═══════════ IV · Height ═══════════ -->
+    <section class="scene scene--height" data-scene="height" data-chapter="IV" data-chapter-title="Your Height">
+      <div class="column">
+        <p class="eyebrow" data-reveal>Chapter IV</p>
+        <h2 class="display" data-reveal>And your <em>height.</em></h2>
+        <p class="lede" data-reveal>Glide the ribbon until it rests on you.</p>
+        <div class="height" data-reveal>
+          <output class="height__value" data-height-value aria-live="polite">
+            <span class="height__cm" data-height-cm>165</span><span class="height__unit">cm</span>
+            <span class="height__imperial" data-height-imperial>5′ 5″</span>
+          </output>
+          <div class="ruler-wrap">
+            <div class="ruler" data-ruler tabindex="0" role="slider" aria-label="Height in centimetres" aria-valuemin="140" aria-valuemax="210">
+              <div class="ruler__track" data-ruler-track></div>
+            </div>
+            <div class="ruler__needle" aria-hidden="true"></div>
+          </div>
+          <p class="ruler__hint" aria-hidden="true"><span>Shorter</span><span>Taller</span></p>
+        </div>
+        <div class="row row--end" data-reveal>
+          <button class="btn btn--solid" type="button" data-height-continue><span>Enter the salon</span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ V · Salon ═══════════ -->
+    <section class="scene scene--salon" data-scene="salon" data-chapter="V" data-chapter-title="The Salon">
+      <header class="salon__head">
+        <p class="eyebrow" data-reveal data-collection-name>The Collection</p>
+        <h2 class="display display--greeting" data-reveal data-greeting>&nbsp;</h2>
+        <p class="lede" data-reveal>The collection has been arranged for you alone. Choose a piece, and we shall dress you in it.</p>
+      </header>
+      <div class="catalog" data-catalog></div>
+      <div class="salon__close" data-salon-close hidden>
+        <p class="salon__close-line">When you are ready, we will gather your looks.</p>
+        <button class="btn btn--solid" type="button" data-conclude><span>I am finished</span></button>
+      </div>
+    </section>
+
+    <!-- ═══════════ VI · Reveal ═══════════ -->
+    <section class="scene scene--reveal" data-scene="reveal" data-chapter="VI" data-chapter-title="The Fitting">
+      <div class="reveal">
+        <figure class="reveal__frame" data-reveal>
+          <button class="reveal__zoom" type="button" data-open-lightbox aria-label="View in full detail">
+            <img class="reveal__img" alt="" data-reveal-img>
+          </button>
+          <figcaption class="reveal__caption"><span>Touch to view in full detail</span></figcaption>
+        </figure>
+        <div class="reveal__text">
+          <p class="eyebrow" data-reveal data-reveal-index></p>
+          <h2 class="display" data-reveal><span data-reveal-name></span></h2>
+          <p class="reveal__piece" data-reveal data-reveal-piece></p>
+          <blockquote class="reveal__note" data-reveal><p data-reveal-note></p></blockquote>
+          <p class="reveal__price" data-reveal data-reveal-price></p>
+          <p class="reveal__preview" data-reveal data-reveal-preview hidden>Atelier preview — your portrait is shown while the try-on key is not yet configured.</p>
+          <div class="reveal__actions" data-reveal>
+            <button class="btn btn--solid" type="button" data-try-another><span>Try another piece</span></button>
+            <button class="btn" type="button" data-conclude><span>I am finished</span></button>
+          </div>
+          <button class="link link--quiet" type="button" data-toggle-selection data-reveal>Remove from my selection</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ VII · Finale ═══════════ -->
+    <section class="scene scene--finale" data-scene="finale" data-chapter="VII" data-chapter-title="Your Selection">
+      <div class="finale">
+        <header class="finale__head">
+          <p class="eyebrow" data-reveal>Chapter VII</p>
+          <h2 class="display" data-reveal>Your <em>selection.</em></h2>
+          <p class="finale__whatsapp" data-reveal data-finale-whatsapp></p>
+        </header>
+
+        <ol class="looks" data-finale-items></ol>
+
+        <div class="finale__total" data-reveal>
+          <span>Your selection</span>
+          <span class="finale__total-value" data-finale-total></span>
+        </div>
+
+        <article class="letter" data-letter>
+          <div class="letter__seal" aria-hidden="true"><img src="/assets/monogram.svg" alt=""></div>
+          <p class="letter__salutation" data-letter-salutation></p>
+          <div class="letter__body" data-letter-body></div>
+          <p class="letter__closing" data-letter-closing></p>
+          <p class="letter__signature" data-letter-signature></p>
+        </article>
+
+        <div class="row row--center finale__actions">
+          <button class="btn btn--solid" type="button" data-reserve><span>Make them mine</span></button>
+          <button class="link" type="button" data-return-salon>Return to the salon</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ─────────────── Atelier: the waiting ritual ─────────────── -->
+  <div class="atelier" data-atelier hidden aria-live="polite">
+    <canvas class="atelier__dust" data-atelier-dust aria-hidden="true"></canvas>
+    <div class="atelier__inner">
+      <p class="eyebrow eyebrow--light" data-atelier-eyebrow>In the atelier</p>
+      <div class="atelier__frame" data-atelier-frame>
+        <img class="atelier__portrait" alt="" data-atelier-portrait>
+        <img class="atelier__portrait atelier__portrait--lit" alt="" data-atelier-portrait-lit>
+        <div class="atelier__light" aria-hidden="true"></div>
+        <svg class="atelier__thread" viewBox="0 0 200 300" aria-hidden="true">
+          <path pathLength="1" d="M100 20 C 78 20 70 34 70 48 L 52 62 C 40 70 36 92 34 120 L 46 122 L 56 92 L 58 150 C 50 190 38 240 30 280 L 170 280 C 162 240 150 190 142 150 L 144 92 L 154 122 L 166 120 C 164 92 160 70 148 62 L 130 48 C 130 34 122 20 100 20 Z"/>
+        </svg>
+        <div class="atelier__flash" aria-hidden="true"></div>
+      </div>
+      <h3 class="atelier__garment" data-atelier-garment></h3>
+      <ol class="atelier__phases" data-atelier-phases>
+        <li data-phase="reading"><span>I</span>Reading your silhouette</li>
+        <li data-phase="draping"><span>II</span>Draping the cloth</li>
+        <li data-phase="pressing"><span>III</span>Pressing every seam</li>
+        <li data-phase="unveiling"><span>IV</span>The final light</li>
+      </ol>
+      <div class="atelier__progress" aria-hidden="true"><span data-atelier-progress></span></div>
+      <p class="atelier__story" data-atelier-story></p>
+      <div class="atelier__ask" data-atelier-ask>
+        <p>While we work — where will you wear it?</p>
+        <div class="atelier__chips" role="radiogroup">
+          <button type="button" role="radio" aria-checked="false" data-occasion="candlelight">By candlelight</button>
+          <button type="button" role="radio" aria-checked="false" data-occasion="morning">In morning light</button>
+          <button type="button" role="radio" aria-checked="false" data-occasion="journey">On a journey</button>
+          <button type="button" role="radio" aria-checked="false" data-occasion="myself">Simply for me</button>
+        </div>
+      </div>
+      <div class="atelier__error" data-atelier-error hidden>
+        <p data-atelier-error-text></p>
+        <div class="row row--center">
+          <button class="btn btn--light" type="button" data-atelier-retry><span>Try again</span></button>
+          <button class="link link--light" type="button" data-atelier-dismiss>Return to the salon</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─────────────── Camera ─────────────── -->
+  <div class="camera" data-camera hidden role="dialog" aria-modal="true" aria-label="Camera">
+    <div class="camera__viewport">
+      <video class="camera__video" playsinline muted autoplay data-camera-video></video>
+      <svg class="camera__guide" viewBox="0 0 120 300" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><path d="M60 18a16 16 0 1 1 0 32a16 16 0 1 1 0-32Zm-22 44c6-5 14-7 22-7s16 2 22 7c7 6 10 16 11 26l4 54c0 4-3 7-7 7s-6-3-7-7l-4-42-2 72 6 92c0 5-4 9-9 9s-8-4-9-9l-9-82-9 82c-1 5-4 9-9 9s-9-4-9-9l6-92-2-72-4 42c-1 4-3 7-7 7s-7-3-7-7l4-54c1-10 4-20 11-26Z"/></svg>
+      <p class="camera__hint">Step back until your whole figure rests within the outline</p>
+      <div class="camera__count" data-camera-count aria-live="assertive"></div>
+      <div class="camera__flash" data-camera-flash></div>
+    </div>
+    <div class="camera__bar">
+      <button class="camera__side" type="button" data-camera-close>Close</button>
+      <div class="camera__controls">
+        <button class="camera__timer" type="button" data-camera-timer aria-label="Self-timer">Timer · <span data-camera-timer-label>5s</span></button>
+        <button class="camera__shutter" type="button" data-camera-shutter aria-label="Capture"><span></span></button>
+        <button class="camera__side" type="button" data-camera-flip>Flip</button>
+      </div>
+    </div>
+    <p class="camera__error" data-camera-error hidden></p>
+  </div>
+
+  <!-- ─────────────── Selection drawer ─────────────── -->
+  <aside class="drawer" data-drawer hidden aria-label="Your selection">
+    <div class="drawer__scrim" data-close-drawer></div>
+    <div class="drawer__panel" role="dialog" aria-modal="true">
+      <header class="drawer__head">
+        <p class="eyebrow">Your selection</p>
+        <button class="drawer__close" type="button" data-close-drawer aria-label="Close">Close</button>
+      </header>
+      <ul class="drawer__list" data-drawer-list></ul>
+      <footer class="drawer__foot">
+        <div class="drawer__total"><span>Total</span><span data-drawer-total></span></div>
+        <button class="btn btn--solid btn--block" type="button" data-conclude><span>I am finished</span></button>
+      </footer>
+    </div>
+  </aside>
+
+  <!-- ─────────────── Lightbox ─────────────── -->
+  <div class="lightbox" data-lightbox hidden role="dialog" aria-modal="true" aria-label="Look in full detail">
+    <div class="lightbox__canvas" data-lightbox-canvas>
+      <img class="lightbox__img" alt="" data-lightbox-img draggable="false">
+    </div>
+    <p class="lightbox__hint">Pinch, scroll or double-tap to look closer</p>
+    <button class="lightbox__close" type="button" data-close-lightbox>Close</button>
+  </div>
+
+  <!-- ─────────────── Curtain & whispers ─────────────── -->
+  <div class="curtain" data-curtain aria-hidden="true"><span class="curtain__mark">S</span></div>
+  <div class="whisper" role="status" aria-live="polite" data-whisper></div>
+  <div class="progress" aria-hidden="true"><span data-progress></span></div>
+
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>

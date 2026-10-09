@@ -1,0 +1,185 @@
+{
+  "collection": "Collection Lumière — Autumn Winter",
+  "garments": [
+    {
+      "id": "aube",
+      "name": "Aube",
+      "category": "gown",
+      "piece": "Silk charmeuse gown",
+      "material": "Silk charmeuse",
+      "price": 385000,
+      "image": "aube",
+      "tone": "#d9c6ae",
+      "description": "Bias-cut silk that pours like first light. It moves a breath after you, and lingers long after you leave.",
+      "notes": [
+        "Aube is cut on the bias from a single length of charmeuse, so it follows the body rather than holding it.",
+        "Its hem is rolled by hand — nearly four metres of stitches no wider than a grain of rice."
+      ]
+    },
+    {
+      "id": "minuit",
+      "name": "Minuit",
+      "category": "coat",
+      "piece": "Double-faced cashmere coat",
+      "material": "Double-faced cashmere",
+      "price": 465000,
+      "image": "minuit",
+      "tone": "#2e2a2b",
+      "description": "Double cashmere, hand-finished until it feels confided rather than worn. Winter, rendered tender.",
+      "notes": [
+        "Double-faced cashmere is woven as two cloths, then separated by hand at every seam — there is no lining, only softness.",
+        "Each Minuit coat passes through the hands of one tailor, from first cut to final press."
+      ]
+    },
+    {
+      "id": "vellum",
+      "name": "Vellum",
+      "category": "blazer",
+      "piece": "Tailored wool-silk blazer",
+      "material": "Wool and silk grain de poudre",
+      "price": 245000,
+      "image": "vellum",
+      "tone": "#bfb3a2",
+      "description": "A shoulder sculpted by hand, a waist that remembers yours. Authority, whispered rather than spoken.",
+      "notes": [
+        "The shoulder of Vellum is built from seven layers of canvas, padded and shaped by hand over two days.",
+        "Its buttonholes are hand-sewn in silk twist — the quiet signature of the atelier."
+      ]
+    },
+    {
+      "id": "serac",
+      "name": "Sérac",
+      "category": "knit",
+      "piece": "Cable-knit baby cashmere sweater",
+      "material": "Baby cashmere",
+      "price": 128000,
+      "image": "serac",
+      "tone": "#ece3d4",
+      "description": "Baby cashmere knotted into quiet architecture — the warmth of an embrace, the line of a sculpture.",
+      "notes": [
+        "Only the first combing of the kid goat's undercoat is used — finer than fifteen microns.",
+        "Sérac's cables are knitted in a single, unbroken thread so the pattern never interrupts itself."
+      ]
+    },
+    {
+      "id": "ombre",
+      "name": "Ombre",
+      "category": "dress",
+      "piece": "Liquid satin slip dress",
+      "material": "Silk satin",
+      "price": 198000,
+      "image": "ombre",
+      "tone": "#5a4a45",
+      "description": "A single sweep of satin, cut to catch candlelight — and to keep your secrets beautifully.",
+      "notes": [
+        "Ombre's satin is woven slowly on vintage looms, giving it a depth that glows rather than shines.",
+        "The straps are adjustable by a hidden slider, so the neckline falls exactly where you wish."
+      ]
+    },
+    {
+      "id": "lisiere",
+      "name": "Lisière",
+      "category": "skirt",
+      "piece": "Sun-ray pleated silk midi skirt",
+      "material": "Silk crêpe de chine",
+      "price": 156000,
+      "image": "lisiere",
+      "tone": "#a99482",
+      "description": "Two hundred sun-ray pleats, each pressed by hand, opening like a sigh with every step you take.",
+      "notes": [
+        "Each pleat of Lisière is set between card moulds and steamed by hand — a craft passed down through three generations.",
+        "When you are still, it falls as a column. When you walk, it blooms."
+      ]
+    },
+    {
+      "id": "calme",
+      "name": "Calme",
+      "category": "shirt",
+      "piece": "Poplin column shirt",
+      "material": "Sea Island cotton poplin",
+      "price": 72000,
+      "image": "calme",
+      "tone": "#f4f1ea",
+      "description": "Sea Island cotton, impossibly crisp and softly dramatic at the cuff. The art of perfect restraint.",
+      "notes": [
+        "Sea Island cotton is the rarest in the world — less than a fraction of one percent of all cotton grown.",
+        "The collar of Calme is cut by hand and never fused, so it softens to you over the years."
+      ]
+    },
+    {
+      "id": "rivage",
+      "name": "Rivage",
+      "category": "trouser",
+      "piece": "High-waisted wide-leg trouser",
+      "material": "Fluid Italian wool",
+      "price": 98000,
+      "image": "rivage",
+      "tone": "#8c8378",
+      "description": "Fluid wool falling in one unbroken line from waist to floor. Length, effortlessly given.",
+      "notes": [
+        "Rivage is pressed with a single, razor-sharp crease that our pressers set by eye, never by machine.",
+        "The waistband is shaped with a curved seam so it sits higher, and kinder, than any straight band."
+      ]
+    },
+    {
+      "id": "noctis",
+      "name": "Noctis",
+      "category": "jacket",
+      "piece": "Silk velvet tuxedo jacket",
+      "material": "Silk velvet, grosgrain lapels",
+      "price": 285000,
+      "image": "noctis",
+      "tone": "#1d1a22",
+      "description": "Midnight silk velvet with grosgrain lapels — made for the moment the room turns to look.",
+      "notes": [
+        "Velvet must be cut with its pile all running one way; Noctis is laid out panel by panel under a single lamp.",
+        "The lapels are faced in grosgrain woven in a small mill that has made only ribbon for a century."
+      ]
+    },
+    {
+      "id": "albatre",
+      "name": "Albâtre",
+      "category": "dress",
+      "piece": "Draped jersey evening dress",
+      "material": "Silk jersey",
+      "price": 325000,
+      "image": "albatre",
+      "tone": "#e8e0d6",
+      "description": "Alabaster jersey draped directly on the form, falling into folds a sculptor would envy.",
+      "notes": [
+        "Albâtre is draped on a living form, not a pattern — every fold is pinned where it wished to fall.",
+        "Its silk jersey weighs barely anything, yet holds a drape as if carved."
+      ]
+    },
+    {
+      "id": "brume",
+      "name": "Brume",
+      "category": "coat",
+      "piece": "Cashmere trench coat",
+      "material": "Mist-grey cashmere gabardine",
+      "price": 395000,
+      "image": "brume",
+      "tone": "#a7a39d",
+      "description": "Our trench, reimagined in mist-grey cashmere. Rain was never quite this romantic.",
+      "notes": [
+        "Brume's gabardine is woven so densely it turns away a passing shower, yet drapes like a cardigan.",
+        "The horn buttons are cut and polished by hand; no two share quite the same pattern."
+      ]
+    },
+    {
+      "id": "ardent",
+      "name": "Ardent",
+      "category": "shirt",
+      "piece": "Silk organza ruffle blouse",
+      "material": "Silk organza",
+      "price": 112000,
+      "image": "ardent",
+      "tone": "#e6d3cc",
+      "description": "Sheer organza with a softly ruffled collar — a breath of romance, held with perfect poise.",
+      "notes": [
+        "Organza is unforgiving: one wrong stitch shows. Ardent's seams are French-finished, invisible from either side.",
+        "Its ruffle is cut on a spiral, so it falls in soft waves instead of gathers."
+      ]
+    }
+  ]
+}

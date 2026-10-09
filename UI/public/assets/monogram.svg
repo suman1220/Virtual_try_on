@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <circle cx="32" cy="32" r="31" fill="#5C1A20"/>
+  <circle cx="32" cy="32" r="27.5" fill="none" stroke="#C9AE7E" stroke-width="0.6"/>
+  <circle cx="32" cy="32" r="25.5" fill="none" stroke="#C9AE7E" stroke-width="0.3" stroke-dasharray="0.6 1.4"/>
+  <text x="32" y="43" text-anchor="middle" font-family="Didot, 'Bodoni 72', 'Bodoni Moda', Georgia, serif" font-style="italic" font-size="32" fill="#EFE3CB">S</text>
+</svg>
